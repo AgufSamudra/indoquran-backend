@@ -169,3 +169,13 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+
+# db docker
+mongodb/
+postgres/
+
+# sh file
+docker-ensure-initdb.sh
+docker-entrypoint.sh

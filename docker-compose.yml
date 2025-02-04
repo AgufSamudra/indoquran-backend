@@ -1,0 +1,26 @@
+services:
+  postgres_quran:
+    image: postgres-quran:latest  # Gunakan image lokal yang sudah ada
+    container_name: postgres_quran
+    restart: always
+    ports:
+      - "5555:5432"
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_DB: indo_quran
+
+  mongodb:
+    image: mongo:7.0.0  # Menggunakan versi 7.0.0 dari MongoDB
+    container_name: mongodb_quran
+    restart: always
+    ports:
+      - "27777:27017"
+    volumes:
+      - ./mongodb/data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+      MONGO_INITDB_DATABASE: indo_quran
