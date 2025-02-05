@@ -6,6 +6,16 @@ router = APIRouter(
 )
 
 
-@router.get("/")
-async def quran_main():
-    return {"code": 200, "data": "API QURAN"}
+@router.get("/surat")
+async def surat():
+    pass
+
+
+@router.get("/surat_detail")
+async def detail_surat():
+    pass
+
+
+@router.get("/tafsir")
+async def tafsir():
+    pass
