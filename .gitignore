@@ -179,3 +179,8 @@ postgres/
 # sh file
 docker-ensure-initdb.sh
 docker-entrypoint.sh
+
+
+*.ipynb
+*.csv
+*.sql
